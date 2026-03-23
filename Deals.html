@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Shopping website - Offmarket </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!-- Top Section - Logo, Brand Name,Home,Products,Cart,Deals,Contact Us -->
+ <main>
+<header>
+    <h1> OFFMARKET </h1>
+    <nav>
+        <a href="index.html"> Home </a>
+        <a href="products.html"> Products </a>
+        <!-- <a href="Shp_cart.html"> Cart </a> --> <a href="Shp_cart.html">Cart <span id="cart-count">(0)</span></a>
+        <a href="Deals.html"> Deals </a>
+        <a href="contact.html"> Contact Us </a>
+    </nav>
+</header>
+
+<!-- Image of the deals available on the website -->
+    <section class="Deals-image">
+        <a href="products.html">
+        <img src="Image/Shop Now!!.jpg" alt="Deals Image" class="deals-banner">
+        </a>
+    </section>
+
+<!-- This section is standard for all the pages of the website. It is for the footer section of the website. 
+ It is for the subscription of the newsletter and the copyright information. -->
+
+<footer>    
+<h3>Stay up to date!!</h3> 
+<h4> Get our latest updates delivered to you </h4>
+<p> Enter your email to get our updates,blogs & plugin updates. Once a week. </p>
+<input type="email" id="email" name="email" placeholder="Enter your Email">
+<button onclick="subscribeEmail()">Subscribe</button>
+<p>&copy; 2020 - 2026 Powered by Aura | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

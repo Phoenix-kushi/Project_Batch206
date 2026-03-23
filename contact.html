@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Shopping website - Offmarket </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!-- Top Section - Logo, Brand Name,Home,Products,Cart,Deals,Contact Us -->
+ <main>
+<header>
+    <h1> OFFMARKET </h1>
+    <nav>
+        <a href="index.html"> Home </a>
+        <a href="products.html"> Products </a>
+        <!-- <a href="Shp_cart.html"> Cart </a> --> <a href="Shp_cart.html">Cart <span id="cart-count">(0)</span></a>
+        <a href="Deals.html"> Deals </a>
+        <a href="contact.html"> Contact Us </a>
+    </nav>
+</header>
+<div class="contact-container">
+   <!-- Left side -->
+        <div class="contact-info">
+            <p class="contact-label">CONTACT US</p>
+            <h2>Hello, There!</h2>
+            <p>Give us a call or send a note. We will be happy to answer your questions.</p>
+
+        <div class="info-item">
+                <span class="icon">📞</span>
+                <div>
+                    <h4>CONTACT</h4>
+                    <p>support@offmarket.com</p>
+                    <p>+91 98765 43210</p>
+                </div>
+        </div>
+
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <div>
+                    <h4>LOCATION</h4>
+                    <p>123, Off to the market Street</p>
+                    <p>Bengaluru, Karnataka - 560001</p>
+                </div>
+            </div>
+        </div>
+        <!-- Right side -->
+         <!-- This is the Contact Form where it has input fields for the user to fill out -->
+        <div class="contact-form">
+            <p class="contact-label">SEND A NOTE</p>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" rows="4" placeholder="Question *" required></textarea>
+            </div>
+            <button type="button" onclick="sendMessage()">Send</button>
+            <p id="success-msg" style="color: green; display: none;">
+    ✅ Your message has been sent. We will contact you shortly!
+</p>
+        </div>
+    </div>
+</main>
+
+<!-- This section is standard for all the pages of the website. It is for the footer section of the website. 
+ It is for the subscription of the newsletter and the copyright information. -->
+<footer>    
+    <h3>Stay up to date!!</h3> 
+<h4> Get our latest updates delivered to you </h4>
+<p> Enter your email to get our updates,blogs & plugin updates. Once a week. </p>
+<input type="email" id="email" name="email" placeholder="Enter your Email">
+<button onclick="subscribeEmail()">Subscribe</button>
+<p>&copy; 2020 - 2026 Powered by Aura | All Rights Reserved</p>
+</footer>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

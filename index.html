@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Shopping website - Offmarket </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Top Section - Logo, Brand Name,Home,Products,Cart,Deals,Contact Us -->
+
+<header>
+    <h1> OFFMARKET </h1>
+    <nav>
+        <a href="index.html"> Home </a>
+        <a href="products.html"> Products </a>
+        <!-- <a href="Shp_cart.html"> Cart </a> --> <a href="Shp_cart.html">Cart <span id="cart-count">(0)</span></a>
+        <a href="Deals.html"> Deals </a>
+        <a href="contact.html"> Contact Us </a>
+    </nav>
+</header>
+
+<!-- Main Section - Main Image,Latest Products -->
+<main>
+
+    <!-- Image of the items available on the website -->
+    <section class="Main-image">
+        <img src="Image/Main_Image.png" alt="Main Image">
+        <!-- <p>Off-Market gets all your Items fast & fresh!!</p>  I NEED THIS IN THE CENTER-->
+    </section>
+<!-- Latest Products grid -->
+        <section class="Latest-products">
+            <h2>Latest Products</h2>
+            <div class="product-grid">
+                <!-- products will go here -->
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0F277-WT-1_Theme.jpg?v=1770268589&width=990">
+                 <h4>Peace Lily</h4>
+                  <p class="price">Rs.199</p>
+                 <a href="view-product.html?name=Peace Lily&price=199&img=Image/Products/1.webp">View Product</a>
+                 <button onclick="addToCart('Peace Lily', 'Rs.199')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/81Gs1BifQzL.jpg?v=1765773367&width=990">
+                 <h4>Succulent plant </h4>
+                 <p class="price">Rs.199</p>
+                 <a href="view-product.html?name=Succulent plant&price=199&img=Image/Products/2.webp">View Product</a>
+                 <button onclick="addToCart('Succulent plant', 'Rs.199')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0C978_theme.jpg?v=1747736612&width=990">
+                 <h4>Lucky Bamboo</h4>
+                 <p class="price">Rs.299</p>
+                 <a href="view-product.html?name=Lucky Bamboo&price=299&img=Image/Products/3.webp">View Product</a>
+                <button onclick="addToCart('Lucky Bamboo', 'Rs.299')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0C646_theme.jpg?v=1747736650&width=990w">
+                 <h4>Mini Cypress </h4>
+                 <p class="price">Rs.299</p>
+                 <a href="view-product.html?name=Mini Cypress&price=299&img=Image/Products/4.webp">View Product</a>
+                 <button onclick="addToCart('Mini Cypress', 'Rs.299')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0C645.png?v=1753003420&width=990">
+                 <h4>Mixed Indoor decorative plants </h4>
+                 <p class="price">Rs.199</p>
+                 <a href="view-product.html?name=Mixed Indoor decorative plants&price=199&img=Image/Products/5.webp" class="view-product">View Product</a>
+                 <button onclick="addToCart('Mixed Indoor decorative plants', 'Rs.199')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0E371.jpg?v=1758695227&width=990">
+                 <h4>Flowering plants </h4>
+                 <p class="price">Rs.399</p>
+                 <a href="view-product.html?name=Flowering plants&price=399&img=Image/Products/6.webp" class="view-product">View Product</a>
+                 <button onclick="addToCart('Flowering plants', 'Rs.399')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0E160_theme.jpg?v=1753004101&width=990">
+                 <h4>Money Plant </h4>
+                 <p class="price">Rs.199</p>
+                 <a href="view-product.html?name=Money Plant&price=199&img=Image/Products/7.webp" class="view-product">View Product</a>
+                 <button onclick="addToCart('Money Plant', 'Rs.199')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.easytogrowbulbs.com/cdn/shop/products/Edulis_FrederickPIX.passion-fruit-2183739_1920.jpg?v=1571439584&width=1346">
+                 <h4>Passion Flower </h4>
+                 <p class="price">Rs.599</p>
+                 <a href="view-product.html?name=Passion Flower&price=599&img=Image/Products/8.webp" class="view-product">View Product</a>
+                 <button onclick="addToCart('Passion Flower', 'Rs.599')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0E158_theme.jpg?v=1747738029&width=990">
+                 <h4>Snake Plant - Go Plants </h4>
+                 <p class="price">Rs.199</p>
+                 <a href="view-product.html?name=Snake Plant - Go Plants&price=199&img=Image/Products/9.webp" class="view-product">View Product</a>
+                 <button onclick="addToCart('Snake Plant - Go Plants', 'Rs.199')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.homesake.in/cdn/shop/files/IH0F017-GR-2_4bed5fa0-ded6-43c4-b6fd-dc65b34bed4a.jpg?v=1754914915&width=990">
+                 <h4>Cactus - Go Plants </h4>
+                 <p class="price">Rs.199</p>
+                 <a href="view-product.html?name=Cactus - Go Plants&price=199&img=Image/Products/10.webp" class="view-product">View Product</a>
+                 <button onclick="addToCart('Cactus - Go Plants', 'Rs.199')">Add to Cart</button>
+                 </div>
+
+                 <div class="product-card">
+                 <img src="https://www.easytogrowbulbs.com/cdn/shop/articles/plumeria-for-sale.jpg?v=1557257275">
+                 <h4>Plumeria </h4>
+                 <p class="price">₹799</p>
+                 <a href="view-product.html?name=Plumeria&price=799&img=Image/Products/11.webp" class="view-product">View Product</a>
+                 <button onclick="addToCart('Plumeria', '₹799')">Add to Cart</button>
+                 </div>
+
+            </div>
+        </section>
+</main>
+
+<!-- This section is standard for all the pages of the website. It is for the footer section of the website. 
+ It is for the subscription of the newsletter and the copyright information. -->
+<footer>
+<h3>Stay up to date!!</h3> 
+<h4> Get our latest updates delivered to you </h4>
+<p> Enter your email to get our updates,blogs & plugin updates. Once a week. </p>
+<input type="email" id="email" name="email" placeholder="Enter your Email">
+<button onclick="subscribeEmail()">Subscribe</button><br>
+<p>&copy; 2020 - 2026 Powered by Aura | All Rights Reserved</p>
+</footer>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

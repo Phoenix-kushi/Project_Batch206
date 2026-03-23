@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Shopping website - Offmarket </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<div id="toast"></div>
+<body>
+
+<!-- Top Section - Logo, Brand Name,Home,Products,Cart,Deals,Contact Us -->
+
+<header>
+    <h1> OFFMARKET </h1>
+    <nav>
+        <a href="index.html"> Home </a>
+        <a href="products.html"> Products </a>
+        <!-- <a href="Shp_cart.html"> Cart </a> --> <a href="Shp_cart.html">Cart <span id="cart-count">(0)</span></a>
+        <a href="Deals.html"> Deals </a>
+        <a href="contact.html"> Contact Us </a>
+    </nav>
+</header>
+
+<main>
+    <div class="cart-page">
+
+        <h2>Shopping Cart <span id="cart-page-count">(0)</span></h2>
+
+        <!-- Full width product table -->
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+                <!-- Rows added by JavaScript -->
+               <!-- <tr>
+                    <td colspan="4" class="empty-cart">
+                        Your cart is empty. <a href="products.html">Continue Shopping</a>
+                    </td>
+                </tr>-->
+            </tbody>
+        </table>
+
+        <!-- Bottom right summary section -->
+        <div class="cart-summary">
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">Rs. 0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Tax (18%)</span>
+                <span id="tax">Rs. 0</span>
+            </div>
+
+            <div class="summary-row grand">
+                <span>Grand Total</span>
+                <span id="grand-total">Rs. 0</span>
+            </div>
+
+            <!-- Coupon row -->
+            <div class="coupon-row">
+                <input type="text" id="coupon-input" placeholder="Enter coupon code">
+                <button onclick="applyCoupon()">Apply</button>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+
+            <!--<button class="checkout-btn">Checkout</button>-->
+        </div>
+
+    </div>
+</main>
+
+<!-- <script src="cart.js"></script>-->
+
+<!-- This section is standard for all the pages of the website. It is for the footer section of the website. 
+ It is for the subscription of the newsletter and the copyright information. -->
+<footer>    
+    <h3>Stay up to date!!</h3> 
+<h4> Get our latest updates delivered to you </h4>
+<p> Enter your email to get our updates,blogs & plugin updates. Once a week. </p>
+<input type="email" id="email" name="email" placeholder="Enter your Email">
+<button onclick="subscribeEmail()">Subscribe</button>
+<p>&copy; 2020 - 2026 Powered by Aura | All Rights Reserved</p>
+</footer>
+
+<!-- YOUR EXISTING JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

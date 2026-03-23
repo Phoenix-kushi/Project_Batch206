@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Product - Offmarket</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>OFFMARKET</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <!-- <a href="Shp_cart.html"> Cart </a> --> <a href="Shp_cart.html">Cart <span id="cart-count">(0)</span></a>
+        <a href="Deals.html">Deals</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<!-- PRODUCT VIEW -->
+<main id="single-product-view">
+
+    <!-- BACK BUTTON -->
+    <a href="products.html" class="back-link">← Back to Products</a>
+
+    <div class="single-product-container">
+
+        <!-- LEFT: IMAGE -->
+        <div class="single-product-image">
+            <img id="product-img" src="">
+        </div>
+
+        <!-- RIGHT: DETAILS -->
+        <div class="single-product-details">
+
+            <h2 id="product-name"></h2>
+
+            <p class="price" id="product-price"></p>
+
+            <p id="product-desc">
+                “Carefully grown, vibrant plants from OFFMARKET—perfect for adding freshness, beauty, and a calming natural touch to your home.”
+            </p>
+
+            <!-- QUANTITY -->
+            <div class="quantity-selector">
+                <label>Quantity:</label>
+                <button onclick="decreaseQty()">-</button>
+                <span id="qty">1</span>
+                <button onclick="increaseQty()">+</button>
+            </div>
+
+            <!-- ADD TO CART -->
+            <button class="add-cart-btn" onclick="addToCartFromView()">
+             Add to Cart
+            </button>
+           </div>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<h3>Stay up to date!!</h3> 
+<h4> Get our latest updates delivered to you </h4>
+<p> Enter your email to get our updates,blogs & plugin updates. Once a week. </p>
+<input type="email" id="email" name="email" placeholder="Enter your Email">
+<button onclick="subscribeEmail()">Subscribe</button><br>
+<p>&copy; 2020 - 2026 Powered by Aura | All Rights Reserved</p>
+</footer>
+
+<!-- SCRIPT -->
+
+
+/* ===============================
+   GET DATA FROM URL
+================================ */
+const params = new URLSearchParams(window.location.search);
+
+let productName = params.get("name");
+let productPrice = params.get("price");
+let productImg = params.get("img");
+
+/* ===============================
+   DISPLAY DATA
+================================ */
+document.getElementById("product-name").innerText = productName;
+document.getElementById("product-price").innerText = "Rs." + productPrice;
+document.getElementById("product-img").src = productImg;
+
+
+/* ===============================
+   QUANTITY LOGIC
+================================ */
+let quantity = 1;
+
+function increaseQty() {
+    quantity++;
+    document.getElementById("qty").innerText = quantity;
+}
+
+function decreaseQty() {
+    if (quantity > 1) {
+        quantity--;
+        document.getElementById("qty").innerText = quantity;
+    }
+}
+
+
+/* ===============================
+   ADD TO CART
+================================ */
+function addToCartFromView() {
+    for (let i = 0; i < quantity; i++) {
+        addToCart(productName, "Rs." + productPrice);
+    }
+}
+function addToCart(name, price) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existing = cart.find(item => item.name === name);
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            name: name,
+            price: parseInt(price.replace(/[^\d]/g, "")),
+            qty: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert("✅ " + name + " added to cart!");
+}
+
+
+<!-- YOUR EXISTING JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
+

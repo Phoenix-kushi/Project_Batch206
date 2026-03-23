@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products - Offmarket</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>OFFMARKET</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <!-- <a href="Shp_cart.html"> Cart </a> --> <a href="Shp_cart.html">Cart <span id="cart-count">(0)</span></a>
+        <a href="Deals.html">Deals</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main class="latest-products">
+    <!-- Image of the items available on the website -->
+    <section class="Main-image">
+        <img src="Image/Product_page.png" alt="Product Image">
+        <!-- <p>Off-Market gets all your Items fast & fresh!!</p>  I NEED THIS IN THE CENTER-->
+    </section>
+    
+    <h2>All Products</h2>
+
+    <div class="product-grid">
+
+        <!-- 1 -->
+        <div class="product-card">
+            <img src="Image/Products/1.webp">
+            <h4>Marks Shirt</h4>
+            <p class="price">Rs.999</p>
+            <a href="view-product.html?name=Marks Shirt&price=999&img=Image/Products/1.webp">View Product</a>
+            <button onclick="addToCart('Marks Shirt','Rs.999')">Add to Cart</button>
+        </div>
+
+        <!-- 2 -->
+        <div class="product-card">
+            <img src="Image/Products/2.webp">
+            <h4>Viven Shirt</h4>
+            <p class="price">Rs.1499</p>
+            <a href="view-product.html?name=Viven Shirt&price=1499&img=Image/Products/2.webp">View Product</a>
+            <button onclick="addToCart('Viven Shirt','Rs.1499')">Add to Cart</button>
+        </div>
+
+        <!-- 3 -->
+        <div class="product-card">
+            <img src="Image/Products/3.webp">
+            <h4>Ticking Dhoti</h4>
+            <p class="price">Rs.699</p>
+            <a href="view-product.html?name=Ticking Dhoti&price=699&img=Image/Products/3.webp">View Product</a>
+            <button onclick="addToCart('Ticking Dhoti','Rs.699')">Add to Cart</button>
+        </div>
+
+        <!-- 4 -->
+        <div class="product-card">
+            <img src="Image/Products/4.webp">
+            <h4>LadyBee Jackets</h4>
+            <p class="price">Rs.2999</p>
+            <a href="view-product.html?name=LadyBee Jackets&price=2999&img=Image/Products/4.webp">View Product</a>
+            <button onclick="addToCart('LadyBee Jackets','Rs.2999')">Add to Cart</button>
+        </div>
+
+        <!-- 5 -->
+        <div class="product-card">
+            <img src="Image/Products/5.webp">
+            <h4>Tee Brand T-shirt</h4>
+            <p class="price">Rs.1999</p>
+            <a href="view-product.html?name=Tee Brand T-shirt&price=1999&img=Image/Products/5.webp">View Product</a>
+            <button onclick="addToCart('Tee Brand T-shirt','Rs.1999')">Add to Cart</button>
+        </div>
+
+        <!-- 6 -->
+        <div class="product-card">
+            <img src="Image/Products/6.webp">
+            <h4>Tee Brand Premium</h4>
+            <p class="price">Rs.3999</p>
+            <a href="view-product.html?name=Tee Brand Premium&price=3999&img=Image/Products/6.webp">View Product</a>
+            <button onclick="addToCart('Tee Brand Premium','Rs.3999')">Add to Cart</button>
+        </div>
+
+        <!-- 7 -->
+        <div class="product-card">
+            <img src="Image/Products/7.webp">
+            <h4>Turkey Mirror</h4>
+            <p class="price">Rs.19999</p>
+            <a href="view-product.html?name=Turkey Mirror&price=19999&img=Image/Products/7.webp">View Product</a>
+            <button onclick="addToCart('Turkey Mirror','Rs.19999')">Add to Cart</button>
+        </div>
+
+        <!-- 8 -->
+        <div class="product-card">
+            <img src="Image/Products/8.webp">
+            <h4>Hudson Mirror</h4>
+            <p class="price">Rs.1999</p>
+            <a href="view-product.html?name=Hudson Mirror&price=1999&img=Image/Products/8.webp">View Product</a>
+            <button onclick="addToCart('Hudson Mirror','Rs.1999')">Add to Cart</button>
+        </div>
+
+        <!-- 9 -->
+        <div class="product-card">
+            <img src="Image/Products/9.webp">
+            <h4>Snake Plant</h4>
+            <p class="price">Rs.199</p>
+            <a href="view-product.html?name=Snake Plant&price=199&img=Image/Products/9.webp">View Product</a>
+            <button onclick="addToCart('Snake Plant','Rs.199')">Add to Cart</button>
+        </div>
+
+        <!-- 10 -->
+        <div class="product-card">
+            <img src="Image/Products/10.webp">
+            <h4>Cactus Plant</h4>
+            <p class="price">Rs.199</p>
+            <a href="view-product.html?name=Cactus Plant&price=199&img=Image/Products/10.webp">View Product</a>
+            <button onclick="addToCart('Cactus Plant','Rs.199')">Add to Cart</button>
+        </div>
+
+        <!-- 11 -->
+        <div class="product-card">
+            <img src="Image/Products/11.webp">
+            <h4>Plant</h4>
+            <p class="price">₹79,999</p>
+            <a href="view-product.html?name=Plant&price=79999&img=Image/Products/11.webp">View Product</a>
+            <button onclick="addToCart('Plant','₹79,999')">Add to Cart</button>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+<h3>Stay up to date!!</h3> 
+<h4> Get our latest updates delivered to you </h4>
+<p> Enter your email to get our updates,blogs & plugin updates. Once a week. </p>
+<input type="email" id="email" name="email" placeholder="Enter your Email">
+<button onclick="subscribeEmail()">Subscribe</button><br>
+<p>&copy; 2020 - 2026 Powered by Aura | All Rights Reserved</p>
+</footer>
+
+<!-- YOUR EXISTING JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
