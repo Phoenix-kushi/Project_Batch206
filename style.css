@@ -869,6 +869,10 @@ hr {
     background: #4a4a35;
     color: white;
     padding: 40px;
+    width: 100%;
+    max-height:800px;
+    object-fit: cover;
+    display: block;
     border-radius: 8px;
     text-align: center;
     margin-bottom: 40px;
@@ -952,4 +956,15 @@ hr {
 #toast.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Deals image section wrapper */
+.deals-image{
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
 }
